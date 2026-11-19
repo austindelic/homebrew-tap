@@ -3,8 +3,12 @@
 Homebrew casks by Austin Delic.
 
 ```sh
-brew install --cask austindelic/tap/spotifast-spatial
+brew tap austindelic/tap
+brew trust austindelic/tap
+brew install --cask spotifast-spatial
 ```
+
+Homebrew 7 only loads casks from taps you have trusted, which is what `brew trust` does.
 
 | Cask | What it is |
 | --- | --- |
