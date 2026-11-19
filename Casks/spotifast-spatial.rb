@@ -7,10 +7,11 @@ cask "spotifast-spatial" do
   desc "Spotify client with native spatial audio and head tracking"
   homepage "https://github.com/austindelic/spotifast-spatial"
 
+  # The releases are GitHub pre-releases, which :github_releases skips.
   livecheck do
-    url :url
+    url "https://github.com/austindelic/spotifast-spatial.git"
     regex(/^v?(\d+(?:\.\d+)+-spatial\.\d+)$/i)
-    strategy :github_releases
+    strategy :git
   end
 
   auto_updates true
